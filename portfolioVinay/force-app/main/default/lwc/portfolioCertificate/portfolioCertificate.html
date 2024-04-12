@@ -1,0 +1,14 @@
+<template>
+    <div class="container">
+        <div class="record-details">
+            <lightning-record-view-form record-id={recordId} object-api-name={objectApiName} columns="2"
+                density="comfy">
+                <lightning-output-field field-name="Certifications__c" variant="label-hidden"></lightning-output-field>
+
+            </lightning-record-view-form>
+        </div>
+        <div class="image-container">
+            <img src={imageUrl} alt="Record Image" class="record-image" />
+        </div>
+    </div>
+</template>

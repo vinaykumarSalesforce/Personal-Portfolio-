@@ -1,0 +1,42 @@
+<template>
+    <!--This template defines the structure of a user profile banner-->
+
+    <!--The outer div with class "banner" represents the entire user profile banner.-->
+    <div class="banner">
+        <!--Display the user's profile picture using an <img> element with class "profile-pic."-->
+        <img src={userMainPic} class="profile-pic" alt="user-key">
+
+        <!--Display the user's Full Name.-->
+        <div class="name">{fullName}</div>
+
+        <!--Display the user's designation at their Company .-->
+        <div class="designation">{designation} at {companyName}</div>
+
+        <!--Display the user's location of the user's company. -->
+        <div class="location">{companyLocation}</div>
+
+         <!-- Social media links section. -->
+         <div>
+            <!-- Check if a LinkedIn URL is provided, and if so, display a LinkedIn icon linking to the URL. -->
+            <template if:true={linkedinUrl}>
+                <a href={linkedinUrl} >
+                    <img src={linkedin} class="social-icon">
+                </a>
+            </template>
+
+            <!-- Check if a GitHub URL is provided, and if so, display a GitHub icon linking to the URL. -->
+            <template if:true={githubUrl}>
+                <a href={githubUrl} target="_blank">
+                    <img src={github} class="social-icon">
+                </a>
+            </template>
+
+              <!-- Check if a trailhead URL is provided, and if so, display a YouTube icon linking to the URL. -->
+              <template if:true={trailheadUrl}>
+                <a href={trailheadUrl} target="_blank">
+                    <img src={trailhead} class="social-icon">
+                </a>
+            </template>
+         </div>
+    </div>
+</template>
